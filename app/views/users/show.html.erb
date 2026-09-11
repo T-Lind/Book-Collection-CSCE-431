@@ -1,0 +1,15 @@
+<% content_for :title, "Show User" %>
+
+<h1>User</h1>
+
+<p>
+  <strong>Username:</strong>
+  <%= @user.username %>
+</p>
+
+<p>
+  <%= link_to "Update", edit_user_path(@user) %>
+  <%= link_to "Delete", delete_user_path(@user) %>
+  <%= link_to "Back to Users", users_path %>
+  <%= link_to "Back to Home", books_path %>
+</p>

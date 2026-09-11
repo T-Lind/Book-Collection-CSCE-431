@@ -1,0 +1,25 @@
+<% content_for :title, "Delete Book" %>
+
+<h1>Delete</h1>
+
+<p>Are you sure you want to permanently delete this book?</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+<p>
+  <strong>Author:</strong>
+  <%= @book.author %>
+</p>
+<p>
+  <strong>Price:</strong>
+  <%= number_to_currency(@book.price) if @book.price %>
+</p>
+<p>
+  <strong>Published date:</strong>
+  <%= @book.published_date %>
+</p>
+
+<%= button_to "Delete Book", book_path(@book), method: :delete %>
+<p><%= link_to "Back to Home", books_path %></p>

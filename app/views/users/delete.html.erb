@@ -1,0 +1,16 @@
+<% content_for :title, "Delete User" %>
+
+<h1>Delete User</h1>
+
+<p>Are you sure you want to permanently delete this user?</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @user.username %>
+</p>
+
+<%= button_to "Delete User", user_path(@user), method: :delete %>
+<p>
+  <%= link_to "Back to Users", users_path %>
+  <%= link_to "Back to Home", books_path %>
+</p>
