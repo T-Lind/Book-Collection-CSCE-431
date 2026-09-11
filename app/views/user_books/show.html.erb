@@ -1,0 +1,18 @@
+<% content_for :title, "Show User Book" %>
+
+<h1>User Book</h1>
+
+<p>
+  <strong>User:</strong>
+  <%= @user_book.user.username %>
+</p>
+<p>
+  <strong>Book:</strong>
+  <%= @user_book.book.title %>
+</p>
+
+<p>
+  <%= link_to "Update", edit_user_book_path(@user_book) %>
+  <%= link_to "Delete", delete_user_book_path(@user_book) %>
+  <%= link_to "Back to User Books", user_books_path %>
+</p>
