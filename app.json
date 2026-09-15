@@ -1,0 +1,17 @@
+{
+  "name": "book-collection",
+  "description": "CSCE-431 Book Collection",
+  "stack": "heroku-24",
+  "buildpacks": [
+    { "url": "heroku/ruby" }
+  ],
+  "addons": ["heroku-postgresql:essential-0"],
+  "scripts": {
+    "postdeploy": "bundle exec rails db:migrate"
+  },
+  "env": {
+    "RAILS_ENV": { "value": "production" },
+    "RAILS_MASTER_KEY": { "required": true },
+    "RAILS_SERVE_STATIC_FILES": { "value": "enabled" }
+  }
+}
